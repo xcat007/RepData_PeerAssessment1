@@ -67,7 +67,7 @@ g <- ggplot(df2, aes(interval, x)) + geom_line(size = 1, color = "red") + ggtitl
 print(g + labs(x="Time Interval", y = "Number of steps"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/activityplot1-1.png) 
 
 
 * The time period with the maximum number of steps is:
@@ -198,5 +198,5 @@ g11 <- g10 + facet_grid(daytype ~.)
 print(g11)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png) 
+![](PA1_template_files/figure-html/activityplot2-1.png) 
 

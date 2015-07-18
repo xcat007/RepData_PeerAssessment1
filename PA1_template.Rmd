@@ -42,7 +42,7 @@ median(df$steps)
 
 ## What is the average daily activity pattern?
 * create a plot showing average daily activity pattern
-```{r}
+```{r activityplot1}
 require(ggplot2)
 df2 <- aggregate(activity_data$steps, list(interval = activity_data$interval),mean, na.rm=TRUE)
 g <- ggplot(df2, aes(interval, x)) + geom_line(size = 1, color = "red") + ggtitle("Average Daily Activity Pattern")
@@ -130,7 +130,7 @@ names(df6)[3] <- "steps"
 
 * Make a panel plot showing activity across all days by time interval for weekends vs. weekdays
 
-```{r}
+```{r activityplot2}
 g10 <- ggplot(df6, aes(interval,steps)) + geom_line(size = 1, color = "red") + ggtitle("Steps by Time Interval")
 g11 <- g10 + facet_grid(daytype ~.)
 print(g11)
